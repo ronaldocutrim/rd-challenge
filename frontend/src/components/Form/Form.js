@@ -17,23 +17,13 @@ function Form({ onSubmit }) {
 
   const { getRecommendations } = useRecommendations(products);
 
-  function getDataRecommendations(productScores) {
-    if(formData.selectedRecommendationType === 'MultipleProducts') {
-      return productScores.sort((a, b) => b.score - a.score);
-    }
-    const maxScore = Math.max(...productScores.map((product) => product.score));
-    const productsWithMaxScore = productScores.filter((product) => product.score === maxScore);
-    return [productsWithMaxScore[productsWithMaxScore.length - 1]];
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    const recommendation = getRecommendations(formData)
     /**
      * Defina aqui a lógica para atualizar as recomendações e passar para a lista de recomendações
      */
-    const dataRecommendations = getDataRecommendations(recommendation);
-    onSubmit(dataRecommendations)
+    const recommendations = getRecommendations(formData);
+    onSubmit(recommendations);
   };
 
   return (
