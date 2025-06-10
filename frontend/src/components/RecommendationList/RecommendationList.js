@@ -10,7 +10,7 @@ function RecommendationList({ recommendations }) {
       ) : (
         <ul className="flex flex-col gap-4 items-start">
           {recommendations.map((recommendation, index) => (
-            <li key={index} className="border-2 rounded-xl py-2 px-4 text-black bg-cyan-500 border-cyan-300 shadow-">
+            <li key={index} className="border-1 border-cyan-700 font-medium rounded-xl py-2 px-4 text-cyan-700 bg-cyan-50">
               {recommendation.name}
             </li>
           ))}
