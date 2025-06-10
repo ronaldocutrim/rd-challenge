@@ -2,7 +2,7 @@ import React from 'react';
 
 function EmptyView() {
   return (
-    <div className="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg border-2 border-dashed border-gray-300 text-center">
+    <div className="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg text-center">
       <svg
         className="w-16 h-16 text-gray-400 mb-4"
         fill="none"
@@ -21,7 +21,7 @@ function EmptyView() {
       <p className="text-gray-500 mb-4">
         Preencha o formulário com suas preferências e funcionalidades desejadas para receber recomendações personalizadas.
       </p>
-      <div className="bg-cyan-50 p-3 rounded-md border border-cyan-200 w-full">
+      <div className="bg-cyan-50 p-3 rounded-md w-full">
         <p className="text-sm text-cyan-700">
           <span className="font-bold">Dica:</span> Quanto mais específicas forem suas escolhas, melhores serão as recomendações!
         </p>
